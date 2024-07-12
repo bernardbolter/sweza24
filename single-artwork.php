@@ -32,7 +32,7 @@
                             $image_1 = get_field('image_1');
                             if( !empty( $image_1) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_1['url']); ?>" alt="<?php echo esc_attr($image_1)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_1['url']); ?>" />
                                 </div>
                         <?php endif; ?>
 
