@@ -236,13 +236,18 @@ body {
     font-size: 21px;
     line-height: 1.4em;
     transition: .3s all ease-in-out;
+    display: flex;
 }
 
 .nav-link span {
-    font-size: 20px;
     opacity: 0;
     margin: 0 3px 0 0;
+    width: 15px;
     transition: .3s all ease-in-out;
+}
+
+.nav-link span img {
+    width: 100%;
 }
 
 .nav-link:hover span {
@@ -283,8 +288,12 @@ body {
 /* FOOTER */
 
 .footer {
-    bottom: 10px;
-    left: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2px 5px;
+    background: rgba(255,255,255,.9);
+    z-index: 301;
 }
 
 .footer__copyright {
@@ -396,8 +405,6 @@ body {
         top: 0;
         width: 190px;
         padding: 10px 10px 25px 10px;
-        height: auto;
-        border-bottom-right-radius: 130px;
     }
 
     .logo {
@@ -421,7 +428,7 @@ body {
     }
 
     .nav-link span {
-        font-size: 13px;
+        width: 10px;
     }
 
     .nav-category h4 {

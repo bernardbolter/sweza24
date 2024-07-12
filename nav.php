@@ -32,7 +32,8 @@
         <?php while ( $the_work_query->have_posts() ): $the_work_query->the_post();?>
             <?php $slug = get_post_field( 'post_name', get_post() ); ?>
             <a href="<?php the_permalink(  );?>" class="nav-link <?php if ($slug == $current_slug) echo ' active-link' ?>">
-                <span>&rarr;</span><?php the_title() ?>
+            <span class="minus-secondary"><img src="<?php echo get_template_directory_uri() ?>/img/minus.png" alt="minus symbol"/></span>
+            <?php the_title() ?>
             </a>
         <?php endwhile; wp_reset_postdata();?>
     </div>
@@ -52,7 +53,8 @@
         <?php while ( $the_videos_query->have_posts() ): $the_videos_query->the_post();?>
         <?php $slug = get_post_field( 'post_name', get_post() ); ?>
             <a href="<?php the_permalink(  );?>" class="nav-link <?php if ($slug == $current_slug) echo ' active-link' ?>"> 
-                <span>&rarr;</span><?php the_title() ?>
+            <span class="minus-secondary"><img src="<?php echo get_template_directory_uri() ?>/img/minus.png" alt="minus symbol"/></span>
+            <?php the_title() ?>
             </a>
         <?php endwhile; wp_reset_postdata();?>
     </div>
