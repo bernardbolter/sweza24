@@ -28,13 +28,19 @@
 
                     <div class="artworks-container" id="artworkContainer">
 
-                        <?php 
-                            $image_1 = get_field('image_1');
-                            if( !empty( $image_1) ): ?>
-                                <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_1['url']); ?>" alt="<?php echo esc_attr($image_1)['alt']; ?>" />
-                                </div>
-                        <?php endif; ?>
+                            <?php 
+                                $image_1 = get_field('image_1');
+                                $text_1 = get_field('text_1');
+                                if( !empty( $image_1) ): ?>
+                                    <div class="artwork-container">
+                                        <img src="<?php echo esc_url($image_1['url']); ?>" alt="<?php echo esc_attr($image_1)['alt']; ?>" />
+                                        <?php if ( !empty($text_1)): ?>
+                                            <p class="art-text">
+                                                <?php echo $text_1 ?>
+                                            </p>
+                                        <?php endif ?>
+                                    </div>
+                            <?php endif; ?>
 
                             <?php 
                             $video_1 = get_field('video_1');

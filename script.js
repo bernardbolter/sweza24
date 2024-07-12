@@ -1,9 +1,11 @@
 (function($) {
     $(document).ready(function() {
         var linkHeight = 0
+        var artInfoHeight
         getLinkHeight()
         getFooterPosition()
         getArtInfoHeight()
+        setArtworkSizing()
 
         function getLinkHeight() {
             if ($(window).width() > 768) {
@@ -23,7 +25,7 @@
         }
 
         function getArtInfoHeight() {
-            var artInfoHeight = $('#artInfo').height()
+            artInfoHeight = $('#artInfo').height()
             console.log(artInfoHeight)
             if ($(window).width() > 768) {
                 $('#artworkContainer').css({ 'padding-top': `${artInfoHeight}px` })
@@ -32,10 +34,31 @@
             }
         }
 
+        function setArtworkSizing() {
+            var artworkContainers = $('.artwork-container')
+            console.log('art size: ', artInfoHeight)
+
+            artworkContainers.map((i,art) => {
+                if ($(window).width() > 768) {
+                    var Height = $(art).height()
+                    var Width = $(art).width()
+                    if (Height > Width) {
+                        $(art).css({ height : `calc(100vh - ${artInfoHeight + 85}px)` })
+                    } else {
+                        // $(art).addClass('desktop-art-landscape')
+                        $(art).css({ height : `60vh` })
+                    }                 
+                } else {
+                    $(art).css({ height: 'auto' })
+                }
+            })
+        }
+
         $(window).resize(function() {
             getLinkHeight()
             getFooterPosition()
             getArtInfoHeight()
+            setArtworkSizing()
         });
 
         if ($('#navWorkLinks').hasClass('custom-post')) {
@@ -76,5 +99,6 @@
             $('#hamburger').toggleClass('hamburger-open')
             $('#navigation').toggleClass('navigation-open')
         })
+
     })
 })(jQuery);
