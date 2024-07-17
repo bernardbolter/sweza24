@@ -28,13 +28,12 @@
 
                     <div class="artworks-container" id="artworkContainer">
 
-<<<<<<< HEAD
                             <?php 
                                 $image_1 = get_field('image_1');
                                 $text_1 = get_field('text_1');
                                 if( !empty( $image_1) ): ?>
                                     <div class="artwork-container">
-                                        <img src="<?php echo esc_url($image_1['url']); ?>" alt="<?php echo esc_attr($image_1)['alt']; ?>" />
+                                        <img src="<?php echo esc_url($image_1['url']); ?>"  />
                                         <?php if ( !empty($text_1)): ?>
                                             <p class="art-text">
                                                 <?php echo $text_1 ?>
@@ -42,15 +41,7 @@
                                         <?php endif ?>
                                     </div>
                             <?php endif; ?>
-=======
-                        <?php 
-                            $image_1 = get_field('image_1');
-                            if( !empty( $image_1) ): ?>
-                                <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_1['url']); ?>" />
-                                </div>
-                        <?php endif; ?>
->>>>>>> 10820b46f7ab0bec1e7b7393c4a2c8001e066c12
+
 
                             <?php 
                             $video_1 = get_field('video_1');
@@ -59,14 +50,25 @@
                                     <video controls>
                                         <source src="<?php echo $video_1; ?>">
                                     </video>
+                                    <?php if ( !empty($text_1)): ?>
+                                        <p class="art-text">
+                                            <?php echo $text_1 ?>
+                                        </p>
+                                    <?php endif ?>
                                 </div>
                             <?php endif; ?>
 
                             <?php 
                             $image_2 = get_field('image_2');
+                            $text_2 = get_field('text_2');
                             if( !empty( $image_2) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_2['url']); ?>" alt="<?php echo esc_attr($image_2)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_2['url']); ?>"  />
+                                    <?php if ( !empty($text_2)): ?>
+                                        <p class="art-text">
+                                            <?php echo $text_2 ?>
+                                        </p>
+                                    <?php endif ?>
                                 </div>
                             <?php endif; ?>
 
@@ -77,6 +79,11 @@
                                     <video controls>
                                         <source src="<?php echo $video_2; ?>">
                                     </video>
+                                    <?php if ( !empty($text_2)): ?>
+                                        <p class="art-text">
+                                            <?php echo $text_2 ?>
+                                        </p>
+                                    <?php endif ?>
                                 </div>
                             <?php endif; ?>
 
@@ -84,7 +91,7 @@
                             $image_3 = get_field('image_3');
                             if( !empty( $image_3) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_3['url']); ?>" alt="<?php echo esc_attr($image_3)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_3['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -102,7 +109,7 @@
                             $image_4 = get_field('image_4');
                             if( !empty( $image_4) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_4['url']); ?>" alt="<?php echo esc_attr($image_4)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_4['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -120,7 +127,7 @@
                             $image_5 = get_field('image_5');
                             if( !empty( $image_5) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_5['url']); ?>" alt="<?php echo esc_attr($image_5)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_5['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -138,7 +145,7 @@
                             $image_6 = get_field('image_6');
                             if( !empty( $image_6) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_6['url']); ?>" alt="<?php echo esc_attr($image_6)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_6['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -156,7 +163,7 @@
                             $image_7 = get_field('image_7');
                             if( !empty( $image_7) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_7['url']); ?>" alt="<?php echo esc_attr($image_7)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_7['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -174,7 +181,7 @@
                             $image_8 = get_field('image_8');
                             if( !empty( $image_8) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_8['url']); ?>" alt="<?php echo esc_attr($image_8)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_8['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -192,7 +199,7 @@
                             $image_9 = get_field('image_9');
                             if( !empty( $image_9) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_9['url']); ?>" alt="<?php echo esc_attr($image_9)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_9['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -210,7 +217,7 @@
                             $image_9 = get_field('image_9');
                             if( !empty( $image_9) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_9['url']); ?>" alt="<?php echo esc_attr($image_9)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_9['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -228,7 +235,7 @@
                             $image_10 = get_field('image_10');
                             if( !empty( $image_10) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_10['url']); ?>" alt="<?php echo esc_attr($image_10)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_10['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -246,7 +253,7 @@
                             $image_11 = get_field('image_11');
                             if( !empty( $image_11) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_11['url']); ?>" alt="<?php echo esc_attr($image_11)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_11['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -264,7 +271,7 @@
                             $image_12 = get_field('image_12');
                             if( !empty( $image_12) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_12['url']); ?>" alt="<?php echo esc_attr($image_12)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_12['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -282,7 +289,7 @@
                             $image_13 = get_field('image_13');
                             if( !empty( $image_13) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_13['url']); ?>" alt="<?php echo esc_attr($image_13)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_13['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -300,7 +307,7 @@
                             $image_14 = get_field('image_14');
                             if( !empty( $image_14) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_14['url']); ?>" alt="<?php echo esc_attr($image_14)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_14['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -318,7 +325,7 @@
                             $image_15 = get_field('image_15');
                             if( !empty( $image_15) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_15['url']); ?>" alt="<?php echo esc_attr($image_15)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_15['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -336,7 +343,7 @@
                             $image_16 = get_field('image_16');
                             if( !empty( $image_16) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_16['url']); ?>" alt="<?php echo esc_attr($image_16)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_16['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -354,7 +361,7 @@
                             $image_17 = get_field('image_17');
                             if( !empty( $image_17) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_17['url']); ?>" alt="<?php echo esc_attr($image_17)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_17['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -372,7 +379,7 @@
                             $image_18 = get_field('image_18');
                             if( !empty( $image_18) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_18['url']); ?>" alt="<?php echo esc_attr($image_18)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_18['url']); ?>"  />
                                 </div>
                             <?php endif; ?>
 
@@ -390,7 +397,7 @@
                             $image_19 = get_field('image_19');
                             if( !empty( $image_19) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_19['url']); ?>" alt="<?php echo esc_attr($image_19)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_19['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
@@ -408,7 +415,7 @@
                             $image_20 = get_field('image_20');
                             if( !empty( $image_20) ): ?>
                                 <div class="artwork-container">
-                                    <img src="<?php echo esc_url($image_20['url']); ?>" alt="<?php echo esc_attr($image_20)['alt']; ?>" />
+                                    <img src="<?php echo esc_url($image_20['url']); ?>" />
                                 </div>
                             <?php endif; ?>
 
