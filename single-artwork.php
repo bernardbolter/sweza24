@@ -28,6 +28,7 @@
 
                     <div class="artworks-container" id="artworkContainer">
 
+<<<<<<< HEAD
                             <?php 
                                 $image_1 = get_field('image_1');
                                 $text_1 = get_field('text_1');
@@ -41,6 +42,15 @@
                                         <?php endif ?>
                                     </div>
                             <?php endif; ?>
+=======
+                        <?php 
+                            $image_1 = get_field('image_1');
+                            if( !empty( $image_1) ): ?>
+                                <div class="artwork-container">
+                                    <img src="<?php echo esc_url($image_1['url']); ?>" />
+                                </div>
+                        <?php endif; ?>
+>>>>>>> 10820b46f7ab0bec1e7b7393c4a2c8001e066c12
 
                             <?php 
                             $video_1 = get_field('video_1');
